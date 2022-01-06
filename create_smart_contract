@@ -1,0 +1,105 @@
+##########################Creating and deploy helloworld smart contract#####################################
+
+
+
+			<command>						<Response>
+-----------------------------------------------------------------------------------------------------------------------------------
+1. solana config set --url https://api.devnet.solana.com	Config File: /home/chetu/.config/solana/cli/config.yml
+								RPC URL: https://api.devnet.solana.com 
+								WebSocket URL: wss://api.devnet.solana.com/ (computed)
+								Keypair Path: /home/chetu/new-keypair.json 
+								Commitment: confirmed 
+------------------------------------------------------------------------------------------------------------------------------------
+2. solana-keygen new --force					Generating a new keypair
+
+								For added security, enter a BIP39 passphrase
+
+								NOTE! This passphrase improves security of the recovery seed phrase NOT the
+								keypair file itself, which is stored as insecure plain text
+
+								BIP39 Passphrase (empty for none): 
+
+								Wrote new keypair to /home/chetu/.config/solana/id.json
+								==========================================================================
+								pubkey: DjyxzP1tqVGVHCks4efak8XXtzEYKecU6bhXrQrnUW9y
+								==========================================================================
+								Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+								stomach refuse hint spot elevator half vital budget wheel fat chair notice
+								==========================================================================
+--------------------------------------------------------------------------------------------------------------------------------------------
+3. solana airdrop 2						Requesting airdrop of 2 SOL
+
+								Signature: 
+									2dMjcgJkKGx4VDshzxYQpHXufGybUqbpoU9Fg		
+									LaXno8iNJ2GkGfuFKxjtP6JBrhGSJPw8tfz8xXLhPqPESTSH3je
+
+								2 SOL
+----------------------------------------------------------------------------------------------------------------------------------------------
+4. npm run build:program-rust					> helloworld@0.0.1 build:program-c
+								> V=1 make -C ./src/program-c helloworld
+
+make: Entering directory '/home/chetu/manishs7/Project/AnchorMedisBLCH/Code/Wip/src/program-c'
+/home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/scripts/install.sh
+[cc] ../../dist/program/helloworld/helloworld.o (./src/helloworld/helloworld.c)
+mkdir -p ../../dist/program/helloworld/
+/home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/../dependencies/bpf-tools/llvm/bin/clang -Werror -O2 -fno-builtin -std=c17 -isystem/home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/inc -isystem/home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/../dependencies/bpf-tools/llvm/lib/clang/12.0.1/include -I/home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/../dependencies/bpf-tools/llvm/include   -target bpf -fPIC -march=bpfel+solana -o ../../dist/program/helloworld/helloworld.o -c ./src/helloworld/helloworld.c
+[lld] ../../dist/program/helloworld.so (../../dist/program/helloworld/helloworld.o)
+mkdir -p ../../dist/program/
+/home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/../dependencies/bpf-tools/llvm/bin/ld.lld -z notext -shared --Bdynamic /home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/bpf.ld --entry entrypoint -L /home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/../dependencies/bpf-tools/llvm/lib -lc  -o ../../dist/program/helloworld.so ../../dist/program/helloworld/helloworld.o /home/chetu/.local/share/solana/install/active_release/bin/sdk/bpf/c/../dependencies/bpf-tools/rust/lib/rustlib/bpfel-unknown-unknown/lib/libcompiler_builtins-*.rlib
+solana-keygen new --no-passphrase --silent -o ../../dist/program/helloworld-keypair.json
+Wrote new keypair to ../../dist/program/helloworld-keypair.json
+To deploy this program:
+$ solana program deploy /home/chetu/manishs7/Project/AnchorMedisBLCH/Code/Wip/dist/program/helloworld.so
+make: Leaving directory '/home/chetu/manishs7/Project/AnchorMedisBLCH/Code/Wip/src/program-c'
+----------------------------------------------------------------------------------------------------------------------------------------------
+5. solana program deploy dist/program/helloworld.so		msg FCuHigU3rjjpConCU9NnZmPxX8DQSthpXSQfkNjbTKLW
+								msg FCuHigU3rjjpConCU9NnZmPxX8DQSthpXSQfkNjbTKLW
+								msg FCuHigU3rjjpConCU9NnZmPxX8DQSthpXSQfkNjbTKLW
+								msg FCuHigU3rjjpConCU9NnZmPxX8DQSthpXSQfkNjbTKLW
+								msg FCuHigU3rjjpConCU9NnZmPxX8DQSthpXSQfkNjbTKLW
+								msg FCuHigU3rjjpConCU9NnZmPxX8DQSthpXSQfkNjbTKLW
+								msg FCuHigU3rjjpConCU9NnZmPxX8DQSthpXSQfkNjbTKLW
+								---------------------------------------------------------
+								Program Id: HRNeRccPMxTyghVEjBrkp2hhWx9Y3MCSwAw1XLzSBwi4
+								---------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////CLIENT SIDE CODE////////////////////////////////////////////////////////////////////////
+---------------------------------------------------------------------------------------------------------------------------------------------
+1. npm install							up to date, audited 295 packages in 3s
+
+								29 packages are looking for funding
+								  run `npm fund` for details
+
+								found 0 vulnerabilities		
+-------------------------------------------------------------------------------------------------------------------------------------------
+2.  npm start							> helloworld@0.0.1 start
+								> ts-node src/client/main.ts
+								^[[Let's say hello to a Solana account...
+			Connection to cluster established: https://api.devnet.solana.com { 'feature-set': 2385070269, 'solana-core': '1.8.11' }
+					Using account AjVUcZZWX1yMgPgFA82xj9XTZt56ptGaaTVbFZvks5yW containing 1.94014772 SOL to pay for fees
+								Using program HRNeRccPMxTyghVEjBrkp2hhWx9Y3MCSwAw1XLzSBwi4
+								Creating account 8Rhxjm49hx2YVHz87dSxVue49nyDw5uNtaDWJHtLQUfm to say hello to
+								Saying hello to 8Rhxjm49hx2YVHz87dSxVue49nyDw5uNtaDWJHtLQUfm
+								8Rhxjm49hx2YVHz87dSxVue49nyDw5uNtaDWJHtLQUfm has been greeted 1 time(s)
+								Success					
+-----------------------------------------------------------------------------------------------------------------------------------------------
+3. npm run start						> helloworld@0.0.1 start
+								> ts-node src/client/main.ts
+								Let's say hello to a Solana account...
+			Connection to cluster established: https://api.devnet.solana.com { 'feature-set': 2385070269, 'solana-core': '1.8.11' }
+					Using account AjVUcZZWX1yMgPgFA82xj9XTZt56ptGaaTVbFZvks5yW containing 1.939219 SOL to pay for fees
+								Using program HRNeRccPMxTyghVEjBrkp2hhWx9Y3MCSwAw1XLzSBwi4
+								Saying hello to 8Rhxjm49hx2YVHz87dSxVue49nyDw5uNtaDWJHtLQUfm
+								8Rhxjm49hx2YVHz87dSxVue49nyDw5uNtaDWJHtLQUfm has been greeted 2 time(s)
+								Success
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+ 

@@ -1,0 +1,31 @@
+/////////////////////////////////////////File System Wallet///////////////////////////////////////
+		##################### created on Devnet Enviroment#######################################
+
+		/*Command*/					/*Response*/
+--------------------------------------------------------------------------------------------------------------------------------------------
+1. mkdir ~/my-solana-wallet
+--------------------------------------------------------------------------------------------------------------------------------------------
+2. solana-keygen new --outfile
+ ~/my-solana-wallet/my-keypair.json				Generating a new keypair
+
+								For added security, enter a BIP39 passphrase
+
+								NOTE! This passphrase improves security of the recovery seed phrase NOT the
+								keypair file itself, which is stored as insecure plain text
+
+								BIP39 Passphrase (empty for none): 
+
+								Wrote new keypair to /home/chetu/my-solana-wallet/my-keypair.json
+								===========================================================================
+								pubkey: J2HdaXQTrfR6NLnsgLGZzbmfmDaXfiMVEAf5D4QSgLQc
+								===========================================================================
+								Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+								left tumble helmet crater gather master month shock firm notice focus pizza
+								===========================================================================
+---------------------------------------------------------------------------------------------------------------------------------------------
+3. solana-keygen pubkey ~/my-solana-wallet/my-keypair.json    		J2HdaXQTrfR6NLnsgLGZzbmfmDaXfiMVEAf5D4QSgLQc
+---------------------------------------------------------------------------------------------------------------------------------------------
+4. solana-keygen verify <PUBKEY> ~/my-solana-wallet/my-keypair.json 	Verification for public key: 										J2HdaXQTrfR6NLnsgLGZzbmfmDaXfiMVEAf5D4QSgLQc: Success
+---------------------------------------------------------------------------------------------------------------------------------------------
+5. 
+

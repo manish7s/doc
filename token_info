@@ -1,0 +1,29 @@
+#TokenInfo: {
+	// The chain ID of the Solana network where this token is
+	// deployed.
+	chainId: 101 | 102 | 103
+
+	// The checksummed address of the token on the specified chain ID
+	// INCOMPATIBLE: base58
+	address: #Base58Address
+
+	// The number of decimals for the token balance
+	decimals: int & >=0 & <=255
+
+	// The name of the token
+	name: strings.MinRunes(1) & strings.MaxRunes(50) & =~"^[ \\w'+\\-%/À-ÖØ-öø-ÿ:&\\[\\]\\(\\)]+$" | #NameWhitelist
+
+	// The symbol for the token; must be alphanumeric
+	symbol: =~"^[a-zA-Z0-9+\\-%/$_]+$" & strings.MinRunes(1) & strings.MaxRunes(20) | #SymbolWhitelist
+
+	// A URI to the token logo asset; if not set, interface will
+	// attempt to find a logo based on the token address; suggest SVG
+	// or PNG of size 64x64
+	logoURI?: #URL | ""
+
+	// An array of tag identifiers associated with the token; tags are
+	// defined at the list level
+	tags?:       list.MaxItems(10) & [...#TagIdentifier]
+
+	extensions?: #Extensions
+}

@@ -1,0 +1,194 @@
+
+# 1.Solana has a Token Program, written in Rust, that will allow us to create our own token. We will only need to use a simple command-line 		interface to create and send our tokens around.
+
+Generating a new keypair
+
+For added security, enter a BIP39 passphrase
+
+NOTE! This passphrase improves security of the recovery seed phrase NOT the
+keypair file itself, which is stored as insecure plain text
+
+BIP39 Passphrase (empty for none): 
+
+Wrote new keypair to /home/chetu/.config/solana/id.json
+==============================================================================
+pubkey: 6kwAkTok29W11bh5GP997aBve3wtuQ6HxNXpadGbpQvR
+==============================================================================
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+wrestle someone cabin pool tunnel plate jaguar wisdom path husband pink divide
+==============================================================================
+
+
+solana-keygen new -o /home/chetu/new-keypair.json
+Generating a new keypair
+
+For added security, enter a BIP39 passphrase
+
+NOTE! This passphrase improves security of the recovery seed phrase NOT the
+keypair file itself, which is stored as insecure plain text
+
+BIP39 Passphrase (empty for none): 
+
+Wrote new keypair to /home/chetu/new-keypair.json
+=================================================================================
+pubkey: 97pkrmD9DDyQGwai64qxUYzRNbuPcX3R5qSUnP6o7gLR
+=================================================================================
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+
+[46,67,249,196,209,204,208,243,34,96,48,156,108,160,126,34,105,12,178,230,108,242,92,207,230,118,12,73,221,238,20,179,120,156,250,116,141,203,238,188,135,14,87,71,113,35,183,155,8,158,178,176,38,100,78,15,97,71,223,89,249,184,77,210]
+=================================================================================
+-----------------------------------------------------------------------------------------------------
+spl-token create-token
+Creating token 73bdxWnRjmkwjKefy4wNxrgnxeCiKijx5F2an28rtogn
+
+Signature: 3HeASszABScLPoqof9azzrXvg8tQ1ihsoF4n5xXiM1sXbp3z6CFNEPhUQ5SbLxmrtxKhGh7qWNR5Bu7n8re27Do6
+----------------------------------------------------------------------------------------------------------
+solana balance 97pkrmD9DDyQGwai64qxUYzRNbuPcX3R5qSUnP6o7gLR
+1.9985184 SOL
+----------------------------------------------------------------------------------------------------------
+ spl-token create-token
+Creating token AcBDqJMWuFT16M6vegH3ErbkMFRZF2oE9V44tU2rYwwv
+
+Signature: 5JgUELSRset2xRMPznDT6bcv484pV7pB1aTS9BC5pv4LoENkSvpugb8P289mNhN2RC15Vb4bUtC4saYDaYSHPDTe
+-------------------------------------------------------------------------------------------------------
+chetu@CHETUIWK993:~$ solana balance 97pkrmD9DDyQGwai64qxUYzRNbuPcX3R5qSUnP6o7gLR
+1.9970468 SOL
+----------------------------------------------------------------------------------------------------
+
+spl-token create-account  73bdxWnRjmkwjKefy4wNxrgnxeCiKijx5F2an28rtogn
+Creating account 8QpiGob5KxYW2vhkFiA7ZvUU8QrwiBWw74J4HQ3SmuGe
+
+Signature: 5k8UhShA1W1rjmJ8bu7mkMcWi7DkfEsyum4GUSTiiWPwF4EMsrraWGq3jFDXm2qoPaP5yf5jKSC6keQ4oSgJb5sg
+
+---------------------------------------------------------------------------------------------------------
+solana balance 97pkrmD9DDyQGwai64qxUYzRNbuPcX3R5qSUnP6o7gLR
+1.99500252 SOL
+---------------------------------------------------------------------------------------------------------
+solana balance 8QpiGob5KxYW2vhkFiA7ZvUU8QrwiBWw74J4HQ3SmuGe
+0.00203928 SOL
+--------------------------------------------------------------------------------------------------
+
+spl-token mint 73bdxWnRjmkwjKefy4wNxrgnxeCiKijx5F2an28rtogn 200 8QpiGob5KxYW2vhkFiA7ZvUU8QrwiBWw74J4HQ3SmuGe
+Minting 200 tokens
+  Token: 73bdxWnRjmkwjKefy4wNxrgnxeCiKijx5F2an28rtogn
+  Recipient: 8QpiGob5KxYW2vhkFiA7ZvUU8QrwiBWw74J4HQ3SmuGe
+
+Signature: 5DrmW7sVtUbX9vCqrvVFo1fpeajAu4VUfXMNBt4ihDFeXZWGVP2HvujddYpnvoDUvTVAcPh5DXoD5L5dbojYYcxV
+
+-------------------------------------------------------------------------------------------------------------------
+solana balance 8QpiGob5KxYW2vhkFiA7ZvUU8QrwiBWw74J4HQ3SmuGe
+0.00203928 SOL
+
+
+
+
+
+
+
+
+
+
+
+
+##############################################PUBLIC###########################################################
+
+solana-keygen new -o ./Public/Public.json
+Generating a new keypair
+
+For added security, enter a BIP39 passphrase
+
+NOTE! This passphrase improves security of the recovery seed phrase NOT the
+keypair file itself, which is stored as insecure plain text
+
+BIP39 Passphrase (empty for none): 
+
+Wrote new keypair to ./Public/Public.json
+==========================================================================
+pubkey: JCKXsXoLYnBmqAeQSBMNGnrun3d4c4gmLegbpbepJGbh
+[191,141,83,24,34,32,219,64,110,101,12,201,194,85,77,45,17,56,106,79,124,162,127,157,134,185,39,100,236,239,196,197,255,125,5,105,174,99,1,37,124,250,231,102,201,132,149,0,197,71,1,72,21,52,15,204,101,221,204,72,70,232,85,176]
+==========================================================================
+Save this seed phrase and your BIP39 passphrase to recover your new keypair:
+have close fashion dignity pig giant kitchen found garage dutch legend use
+==========================================================================
+
+
+
+
+spl-token create-account 73bdxWnRjmkwjKefy4wNxrgnxeCiKijx5F2an28rtogn
+Creating account 7KvvEYgx3gwCkhUcMQnDbMu5G5SszUhM29Xg9an9yR6S
+
+Signature: 2um83S3wWbhQBTrTF14M73S8G8mN5skvipwgb3vFyYcWyGAtbv1YZscDrDgkwKJJxf63GvYqR8B8kixiDNcSA8Xb
+
+spl-token create-account 73bdxWnRjmkwjKefy4wNxrgnxeCiKijx5F2an28rtogn
+
+
+
+Creating account 8QpiGob5KxYW2vhkFiA7ZvUU8QrwiBWw74J4HQ3SmuGe
+Error: Account already exists: 8QpiGob5KxYW2vhkFiA7ZvUU8QrwiBWw74J4HQ3SmuGe
+
+
+
+
+
+###################################Founders Wallet####################################################
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+privatekey:- 3yxrzaUh6pJwN9BzDwZVF6sRDsEnsExEtxUxKhBPEiK9A4uGV1qX6QHFLDD7afFj41pcNWb84q5a25W4gLBKgVYj
+Publickey:-  54JjXe6WaVVzBwDmJC8wXXV9r4tVET8pTFCRbBboad9q
+######################################################################################################
+
+#################################Team Wallet##########################################################
+Publickey:- 446sBA17GqTtBgvgRsj6c3BtYLY2xxkDSFUqdBr9if6L
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+privatekey:- 5EPX1KGwdxwj77xh9KH4cuUPzosWrEFLx8xSkW8SwHgqQxnkEgrLoEBH5kgBsVogseKvRpefTu8NzkevvrwpvTdE
+######################################################################################################
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------
+#####################################################################################################################
+---------------------------------------------------------------------------------------------------------------------
+
+#################################TAX WALLET############################################################
+
+##################################Marketing#################################################
+PrivateKey:- 4YJ16fEBc8wBGfofWWJUvNfKVR9xE5QhnApKUpu9PmqjKbQSvuuitoETtbEbZXNZLHCkM5T4dLw3Y1pgF7pbHgSr
+Publickey:- HBJKHX1rzArFjHfb6CYxEA5JxrC29pdqRBSD31dJbtbQ
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+#####################################################################################################
+
+##################################Development#########################################################
+PrivateKey:- 3nq6y8TigAb2twBeuTg7A1iB4WpNfAm8Ytn98kizijzTZsWAVyAA9JLkfzVxypqFKwhtFm8pkpyLX4HQgLVxALNQ
+PublicKey:- CPPJsKTs5LR6Xahtg5cCby9eayBiJ22jhQohRYQ5UjtG
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+#########################################################################################################
+
+##################################Liquidity Pool################################################
+PrivateKey:- 5VtqzEfoEgCaFpfrEMoVWnnZz9U5EHrYN1YXfyMJU9E2S43CYLxJobpjhDmQv7thAV6WXFJzin8mdTTFRAcANj2N
+PublicKey:- 2C3TtqETq5jmN5b2XBh18Se8MvFhLMhwJggVWg8uVepN
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+#############################################################################################################
+
+####################################Buyback#################################################################
+PrivateKey:- WLmbFXXu5QeeN2xU3jSicXAoP5C4NFDcbHUGm7sHKsspqkBAcDUZZHCyWbcGxAFLi4BDry2iwNX8YeQvpCNB5Po
+PublicKey:- 3KUAB7NksZ4B96JiXBy8MBJ3sPyh27pzqhYu5ESpUSvm
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+#############################################################################################################
+
+##################################charity############################################################
+PrivateKey:- 3tr4m1MneUEbDieb7MHGpUUGv1ym8CusSbpZ6ybyqzTypEHvSTMgQHBA8fNVBunRKVyyV96pdcqFzxAeFShKfE5v
+PublicKey:- EAuHp54qQRWRijt62czzQPveUJa3DbK3hYXjxzmwrS7S
+artist stuff energy catalog battle live bottom unknown saddle arrive clinic paper
+######################################################################################################
+
+
+
+
+
+
+
+
+
+
+

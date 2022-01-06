@@ -1,0 +1,79 @@
+////////////////////////////////////////Create Token Using SPL CLI///////////////////////////////////////////////////////////////////////////////
+		##################### created on Devnet Enviroment#######################################
+
+		/*Command*/						/*Response*/
+----------------------------------------------------------------------------------------------------------------------------------------------
+		1. solana config get					Config File: /home/chetu/.config/solana/cli/config.yml
+									RPC URL: https://api.devnet.solana.com 
+									WebSocket URL: wss://api.devnet.solana.com/ (computed)
+									Keypair Path: /home/chetu/new-keypair.json 
+									Commitment: confirmed 
+------------------------------------------------------------------------------------------------------------------------------------------------
+		2. solana-keygen new --force 				Generating a new keypair
+
+									For added security, enter a BIP39 passphrase
+
+									NOTE! This passphrase improves security of the recovery seed phrase 										NOT the	keypair file itself, which is stored as insecure plain text
+
+									BIP39 Passphrase (empty for none): 
+
+									Wrote new keypair to /home/chetu/.config/solana/id.json
+									-------------------------------------------------------					  										/*pubkey: GfDknuEdeL381WspjpnJ6EmxsDU1msFKKLimkMu1hk7c*/
+									-------------------------------------------------------
+									
+									Save this seed phrase and your BIP39 passphrase to recover your new 										keypair:
+									battle winter copper unfair twelve token future maze problem index 										battle crane
+--------------------------------------------------------------------------------------------------------------------------------------------------
+		3. solana airdrop 1					Requesting airdrop of 1 SOL
+
+									Signature:4bUBeQC4smPuSeX54ugZQNYFMuNhW26C5fqiDYvxLT
+										  gSmzRiEtD3DFvLVB7T4ksEgfg6bbAJppLfooYhRtdo4hSc	 										*																																																															   										
+									
+
+									2 SOL
+--------------------------------------------------------------------------------------------------------------------------------------------------
+		4. spl-token create-token				/*Creating token 8dtct9SeMmZAo2GAGVjXANFbhFZygVwaAC1Je39sesgN*/
+
+									Signature: 5XSh1iU6qLy2cvHSDysMh4XRkobWSyFgUVRn8ovjV2d
+										   8YufS7TWtAP3WfsX2w4XadAv2VgfhJ3sCCLPtV9oZAi5s
+------------------------------------------------------------------------------------------------------------------------------------------------
+		5. solana balance <Token number>			0.0014616 SOL
+------------------------------------------------------------------------------------------------------------------------------------------------
+		6. spl-token balance <Token number>			0
+------------------------------------------------------------------------------------------------------------------------------------------------
+		7. spl-token create-account <Token number>		/*Creating account DVUYkuW8CjgqrbdsLMnvs56cFKbasFxghM8ThNQjzXsD*/
+									Signature: 3fCMYjGCS3F6VL8xUJ5VASZkr4WAKCwHr9eTm
+										   QFDH1qWSNSKzmgwB74aG2xtX8rrr9VFCPtLX22wnd7PhRfvGDXi
+------------------------------------------------------------------------------------------------------------------------------------------------
+		8.  spl-token mint <Token number> <No of Tokens> 	Minting 3405 tokens
+  									/*Token: 8dtct9SeMmZAo2GAGVjXANFbhFZygVwaAC1Je39sesgN*/
+ 									/*Recipient: DVUYkuW8CjgqrbdsLMnvs56cFKbasFxghM8ThNQjzXsD*/
+
+									Signature: 2r44PSvsX2yry3FKgAPAunxF64kDt4Bk2dqNYdun5z
+										   uA2Kcf6YFduzF13vjGW2ex5uARZFAsc5DUPix8x1KzGBTT
+------------------------------------------------------------------------------------------------------------------------------------------------
+		9. spl-token balance <Token number>			3405
+-------------------------------------------------------------------------------------------------------------------------------------------------
+		10. solana balance <Account number>			0.00203928 SOL
+------------------------------------------------------------------------------------------------------------------------------------------------
+		11. spl-token burn <Account number><no of token>	Burn 2000 tokenscodecompare
+  									/*Source: DVUYkuW8CjgqrbdsLMnvs56cFKbasFxghM8ThNQjzXsD*/
+
+									Signature: 5qjHQuem439eUfe8vRXsdQBDi8kLcQsBquhKET2Zp6V
+										   WVBivr84rfYyce8UmPicUMPygS2WV18TC7mbAyZeY5o4k
+-------------------------------------------------------------------------------------------------------------------------------------------------
+		12. spl-token balance <Token number>			4810
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ 
+
+									
+
+
+
+									
+
+
+					
+

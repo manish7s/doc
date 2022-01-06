@@ -1,0 +1,18 @@
+sudo apt install cargo
+
+cargo install spl-token-cli
+
+sudo apt install packageconfig
+
+
+
+Creating token 6XdTVr8fnPJ7VK91wwG7axyaLs2zRZydANVRLm699ALE
+
+Signature: 614q3SxcdkLe7YdMwJDEPiDxFnHYhE7ku9BwCGw5M2zYzzkuBTtCKCpuvYDTJnQGfdvtDJptTdqY9cWTwaxq2aGv
+
+
+
+solana-keygen new -force
+Public key DgLFBoLf8DX5Ya9gB2ic96wdXuEW3ZJZ2bMT3bZcXDNK
+
+
